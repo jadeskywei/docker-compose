@@ -1,7 +1,7 @@
 version: '3'
 services:
   elasticsearch:
-    image: elasticsearch:7.4.0-ik
+    image: jadesky/elasticsearch:7.4.0-ik
     container_name: elasticsearch-ik
     ports:
      - 9200:9200

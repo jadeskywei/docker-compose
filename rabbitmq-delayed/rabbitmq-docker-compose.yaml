@@ -1,7 +1,7 @@
 version: '3'
 services:
   rabbitmq:
-    image: rabbitmq:3.11-delayed-message
+    image: jadesky/rabbitmq:3.11-delayed-message
     container_name: rabbitmq-delayed-message
     ports:
      - 5672:5672
