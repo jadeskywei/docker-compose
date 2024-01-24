@@ -1,0 +1,12 @@
+version: '3'
+services:
+  rabbitmq:
+    image: rabbitmq:3.11-delayed-message
+    container_name: rabbitmq-delayed-message
+    ports:
+     - 5672:5672
+     - 15672:15672
+    environment:
+     - RABBITMQ_PLUGINS_DIR=/opt/rabbitmq/plugins
+    volumes:
+     - ./rabbitmq_data:/var/lib/data

@@ -1,0 +1,16 @@
+version: '3'
+services:
+  elasticsearch:
+    image: elasticsearch:7.4.0-ik
+    container_name: elasticsearch-ik
+    ports:
+     - 9200:9200
+    environment:
+     - ES_JAVA_OPTS=-Xms1g -Xmx7g
+     - discovery.type=single-node
+     - cluster.routing.allocation.disk.watermark.low=98%
+     - cluster.routing.allocation.disk.watermark.high=99%
+     - cluster.routing.allocation.disk.watermark.flood_stage=99%
+    mem_limit: 8g
+    volumes:
+     - ./esdata:/usr/share/elasticsearch/data
