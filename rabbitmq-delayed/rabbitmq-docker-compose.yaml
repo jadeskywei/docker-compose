@@ -10,3 +10,10 @@ services:
      - RABBITMQ_PLUGINS_DIR=/opt/rabbitmq/plugins
     volumes:
      - ./rabbitmq_data:/var/lib/data
+    networks:
+     - ecom_network
+
+networks:
+  ecom_network:
+    name: ecom_network
+    external: true
