@@ -6,7 +6,7 @@ services:
     ports:
      - 6379:6379
     environment:
-     - REDIS_ARGS=--appendonly yes
+     - REDIS_ARGS=--appendonly yes --save ""
     volumes:
      - ./redis_data:/data
     deploy:
