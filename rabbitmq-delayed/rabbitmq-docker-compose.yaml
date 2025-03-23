@@ -8,6 +8,7 @@ services:
      - 15672:15672
     environment:
      - RABBITMQ_PLUGINS_DIR=/opt/rabbitmq/plugins
+     - RABBITMQ_DEFAULT_PASS=${RABBITMQ_PASSWORD}
     volumes:
      - ./rabbitmq_data:/var/lib/data
     networks:
