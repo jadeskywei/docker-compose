@@ -4,8 +4,8 @@ services:
     image: jadesky/rabbitmq:3.11-delayed-message
     container_name: rabbitmq-delayed-message
     ports:
-     - 5672:5672
-     - 15672:15672
+     - 127.0.0.1:5672:5672
+     - 127.0.0.1:15672:15672
     environment:
      - RABBITMQ_PLUGINS_DIR=/opt/rabbitmq/plugins
      - RABBITMQ_DEFAULT_PASS=${RABBITMQ_PASSWORD}
